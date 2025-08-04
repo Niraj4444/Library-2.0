@@ -10,13 +10,7 @@ function Navbar() {
 
       <div className="navbar-actions">
         <Link to="/contact" className="nav-link">Contact</Link>
-        <Link to="/login" className="nav-link">Login</Link>
-
-        {/* REMOVED: The link to the bookmarks page is now gone. */}
-
-        <Link to="/signup">
-          <button className="btn btn-primary-nav">Sign Up</button>
-        </Link>
+        {/* Login and Sign Up links are now removed. */}
       </div>
     </nav>
   );
