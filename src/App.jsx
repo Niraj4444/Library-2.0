@@ -11,11 +11,12 @@ import Header from './components/Header';
 import Books from './components/Books';
 import Popularbooks from './components/Popularbooks';
 
-// --- Page Imports (Updated) ---
-import BookmarkPage from './pages/BookmarkPage'; // New
-import UserProfilePage from './pages/UserProfilePage'; // New
-// ContactPage is no longer needed
+// --- Page Imports ---
+import BookmarkPage from './pages/BookmarkPage';
+import UserProfilePage from './pages/UserProfilePage';
+import ContactPage from './pages/ContactPage'; // This should be here now
 
+// --- THIS IS THE MISSING PART ---
 // Component for the Home Page content
 function HomePage() {
   return (
@@ -28,6 +29,7 @@ function HomePage() {
     </>
   );
 }
+// --- END OF THE MISSING PART ---
 
 // This is the main App component
 function App() {
@@ -37,9 +39,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* New Routes */}
           <Route path="/bookmarks" element={<BookmarkPage />} />
           <Route path="/user-profile" element={<UserProfilePage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>
     </BrowserRouter>
