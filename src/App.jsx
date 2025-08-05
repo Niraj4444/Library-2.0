@@ -11,8 +11,10 @@ import Header from './components/Header';
 import Books from './components/Books';
 import Popularbooks from './components/Popularbooks';
 
-// --- Page Imports ---
-import ContactPage from './pages/ContactPage';
+// --- Page Imports (Updated) ---
+import BookmarkPage from './pages/BookmarkPage'; // New
+import UserProfilePage from './pages/UserProfilePage'; // New
+// ContactPage is no longer needed
 
 // Component for the Home Page content
 function HomePage() {
@@ -35,8 +37,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          {/* Routes for /login and /signup are now removed. */}
+          {/* New Routes */}
+          <Route path="/bookmarks" element={<BookmarkPage />} />
+          <Route path="/user-profile" element={<UserProfilePage />} />
         </Routes>
       </main>
     </BrowserRouter>
